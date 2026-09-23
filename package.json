@@ -38,6 +38,14 @@
   ],
   "author": "KeshavSoft",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keshavsoft/select-json-by-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/keshavsoft/select-json-by-json/issues"
+  },
+  "homepage": "https://keshavsoft.github.io/select-json-by-json/",
   "devDependencies": {
     "vite": "^8.3.0"
   }
