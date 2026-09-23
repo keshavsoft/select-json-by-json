@@ -11,6 +11,7 @@
       "default": "./index.js"
     },
     "./v1": "./src/v1/index.js",
+    "./v2": "./src/v2/index.js",
     "./package.json": "./package.json"
   },
   "bin": {
