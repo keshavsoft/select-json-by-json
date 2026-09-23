@@ -2,10 +2,43 @@
   "name": "select-json-by-json",
   "version": "1.0.0",
   "type": "module",
-  "private": true,
   "description": "Select a nested JSON structure using a JSON projection spec.",
+  "main": "index.js",
+  "module": "./src/index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./v1": "./src/v1/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "select-json-by-json": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "index.js",
+    "src",
+    "docs/dist",
+    "README.md"
+  ],
   "scripts": {
-    "start": "node index.js",
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node save.js",
     "test": "node --test"
+  },
+  "keywords": [
+    "select-json-by-json",
+    "json-projection",
+    "filter-json",
+    "spec",
+    "tally-json"
+  ],
+  "author": "KeshavSoft",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^8.3.0"
   }
 }
