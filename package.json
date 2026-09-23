@@ -1,0 +1,11 @@
+{
+  "name": "select-json-by-json",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Select a nested JSON structure using a JSON projection spec.",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test"
+  }
+}
