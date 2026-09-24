@@ -1,15 +1,19 @@
 import meta from "./meta.js";
 
-export const registerGlobal = (inFuncDefinition) => {
-    if (typeof globalThis === "undefined" || !inFuncDefinition) return;
+export const registerGlobal = (inParam) => {
+    const localFuncDefinition = typeof inParam === "function"
+        ? inParam
+        : inParam?.inFuncDefinition;
+
+    if (typeof globalThis === "undefined" || !localFuncDefinition) return;
 
     globalThis.ks ??= {};
     globalThis.ks["select-json-by-json"] = {
         meta,
-        selectJson: inFuncDefinition
+        selectJson: localFuncDefinition
     };
 
-    globalThis.ks.selectJson = inFuncDefinition;
+    globalThis.ks.selectJson = localFuncDefinition;
 };
 
 export default registerGlobal;
