@@ -1,0 +1,13 @@
+{
+    "INVOICE_NUMBER": true,
+    "TRANSACTION_DATE": true,
+    "CUSTOMER_NAME": true,
+    "ALL_INVENTORY_ENTRIES_LIST": {
+        "PRODUCT_NAME": true,
+        "AMOUNT_VALUE": true,
+        "BATCH_ALLOCATIONS_LIST": {
+            "BATCH_ID": true,
+            "QTY_VALUE": true
+        }
+    }
+}
