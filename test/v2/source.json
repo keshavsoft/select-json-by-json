@@ -1,0 +1,37 @@
+[
+    {
+        "INVOICE_NUMBER": 1001,
+        "TRANSACTION_DATE": "2026-09-24",
+        "CUSTOMER_NAME": "Alpha Global Industries",
+        "INTERNAL_AUDIT_CODE": "SEC-9912",
+        "TOTAL_TAX": 180.50,
+        "ALL_INVENTORY_ENTRIES_LIST": [
+            {
+                "PRODUCT_NAME": "Industrial Power Cable",
+                "UNIT_RATE": 120.0,
+                "AMOUNT_VALUE": 6000.0,
+                "INTERNAL_REMARKS": "Dock 4 delivery",
+                "BATCH_ALLOCATIONS_LIST": [
+                    {
+                        "BATCH_ID": "LOT-901",
+                        "QTY_VALUE": 50,
+                        "MFG_DATE": "2026-01-10"
+                    }
+                ]
+            },
+            {
+                "PRODUCT_NAME": "Reinforced Mesh Roll",
+                "UNIT_RATE": 45.5,
+                "AMOUNT_VALUE": 910.0,
+                "INTERNAL_REMARKS": "Pallet delivery",
+                "BATCH_ALLOCATIONS_LIST": [
+                    {
+                        "BATCH_ID": "LOT-330",
+                        "QTY_VALUE": 20,
+                        "MFG_DATE": "2026-02-15"
+                    }
+                ]
+            }
+        ]
+    }
+]

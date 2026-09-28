@@ -1,5 +1,5 @@
 export const meta = {
-    version: "v3.0",
+    version: "v6.0",
     description: "Modular story-driven JSON projection engine"
 };
 
