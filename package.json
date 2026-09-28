@@ -1,16 +1,17 @@
 {
   "name": "select-json-by-json",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "type": "module",
   "description": "Select a nested JSON structure using a JSON projection spec.",
   "main": "index.js",
-  "src/v5": "./src/index.js",
+  "module": "./src/index.js",
   "exports": {
     ".": {
       "import": "./index.js",
       "default": "./index.js"
     },
     "./v5": "./src/v5/index.js",
+    "./v6": "./src/v6/index.js",
     "./package.json": "./package.json"
   },
   "bin": {

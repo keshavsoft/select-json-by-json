@@ -43,7 +43,7 @@
                 </div>
                 <div>
                     <h1 class="text-lg font-bold text-white tracking-tight flex items-center gap-2">
-                        select-json-by-json <span class="px-2 py-0.5 text-xs bg-indigo-500/20 text-indigo-300 rounded border border-indigo-500/30 font-mono">v1.0.0</span>
+                        select-json-by-json <span class="px-2 py-0.5 text-xs bg-indigo-500/20 text-indigo-300 rounded border border-indigo-500/30 font-mono">v1.6.1 · engine v6.0</span>
                     </h1>
                     <p class="text-xs text-slate-400">Declarative JSON projection engine for Node.js and Browser</p>
                 </div>
@@ -83,6 +83,7 @@
                     <span class="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
                         <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Source JSON
                     </span>
+                    <button id="btnLoadSample" class="text-[11px] text-indigo-400 hover:text-indigo-300 underline font-mono">Load Sample</button>
                 </div>
                 <textarea id="sourceInput" class="flex-1 p-3 bg-slate-950 text-indigo-200 text-xs font-mono leading-relaxed outline-none resize-none min-h-[360px]" spellcheck="false"></textarea>
             </div>
@@ -123,16 +124,17 @@
 
             <!-- NPX -->
             <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
-                <div class="text-xs font-semibold text-indigo-400 font-mono uppercase tracking-wider">NPX (Local Install)</div>
-                <pre class="p-3 rounded-lg bg-slate-950 text-xs font-mono text-slate-300 overflow-x-auto">npx select-json-by-json</pre>
-                <p class="text-xs text-slate-400">Copies the latest version dynamically from <code class="text-indigo-300">src/</code> into your project.</p>
+                <div class="text-xs font-semibold text-indigo-400 font-mono uppercase tracking-wider">NPX (Copy Engine)</div>
+                <pre class="p-3 rounded-lg bg-slate-950 text-xs font-mono text-slate-300 overflow-x-auto">npx select-json-by-json
+npx select-json-by-json --version-target=v6</pre>
+                <p class="text-xs text-slate-400">Copies the latest engine (<code class="text-indigo-300">v6</code>) into your project as plain JS files.</p>
             </div>
 
             <!-- NPM -->
             <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
                 <div class="text-xs font-semibold text-purple-400 font-mono uppercase tracking-wider">NPM Package</div>
                 <pre class="p-3 rounded-lg bg-slate-950 text-xs font-mono text-slate-300 overflow-x-auto">npm i select-json-by-json</pre>
-                <p class="text-xs text-slate-400">Use <code class="text-purple-300">import { selectJson } from "select-json-by-json"</code> in any Node.js project.</p>
+                <p class="text-xs text-slate-400">Use <code class="text-purple-300">import { selectJson } from "select-json-by-json"</code> or pin with <code class="text-purple-300">/v6</code> or <code class="text-purple-300">/v5</code>.</p>
             </div>
 
             <!-- CDN -->
@@ -245,6 +247,16 @@
         };
 
         btnRun.addEventListener("click", executeProjection);
+
+        // Load sample button
+        const btnLoadSample = document.getElementById("btnLoadSample");
+        if (btnLoadSample) {
+            btnLoadSample.addEventListener("click", () => {
+                sourceInput.value = JSON.stringify(sampleSource, null, 2);
+                specInput.value = JSON.stringify(sampleSpec, null, 2);
+                executeProjection();
+            });
+        }
 
         // Run on start
         executeProjection();
